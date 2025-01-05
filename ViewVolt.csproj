@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Resources\manager-32.png" />
+	  <None Remove="Resources\quicksave-32.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Resources\manager-32.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\quicksave-32.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Revit APIs -->
+		<Reference Include="RevitAPI">
+			<HintPath>..\..\..\..\..\..\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+		</Reference>
+		<Reference Include="RevitAPIUI">
+			<HintPath>..\..\..\..\..\..\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+		</Reference>
+
+		<Reference Include="PresentationCore" />
+		<Reference Include="WindowsBase" />
+		<!-- System References (automatically resolved) -->
+		<Reference Include="System.Windows.Forms" />
+		<Reference Include="Microsoft.VisualBasic" />
+		<Reference Include="System" />
+		<Reference Include="System.Drawing" />
+	</ItemGroup>
+</Project>
